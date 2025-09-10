@@ -5,4 +5,5 @@ format: jb-book
 root: intro
 chapters:
 - file: newbook/intro.md
+- file: ACT_1.ipynb
 
