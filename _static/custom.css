@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Young+Serif&display=swap');
+
+:root{
+    --pst-font-family-heading: "Young Serif", serif;
+    --pst-font-family-base: "IBM Plex Serif", sans-serif;
+    --pst-font-family-monospace : "JetBrains Mono", monospace;
+}
