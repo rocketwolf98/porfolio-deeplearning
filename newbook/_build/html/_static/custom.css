@@ -5,3 +5,26 @@
     --pst-font-family-base: "Lexend", sans-serif;
     --pst-font-family-monospace : "JetBrains Mono", monospace;
 }
+
+/* Active navigation item only */
+.bd-sidebar .active {
+    color: #dc3545 !important; /* Red text */
+    border-left-color: #dc3545 !important; /* Red border */
+}
+
+/* Active navigation item background */
+.bd-sidebar .active {
+    background-color: rgba(220, 53, 69, 0.1) !important; /* Light red background */
+}
+
+/* If you're using sphinx-book-theme */
+.bd-sidebar-primary .toctree-l1.current > a {
+    color: #dc3545 !important;
+    border-left: 3px solid #dc3545 !important;
+}
+
+/* For the underline effect on active items */
+nav.bd-links li.active > a {
+    color: #dc3545 !important;
+    border-left: 4px solid #dc3545 !important;
+}
