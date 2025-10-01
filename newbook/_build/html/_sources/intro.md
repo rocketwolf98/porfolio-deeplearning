@@ -7,14 +7,10 @@ Welcome to my corner of the internet. This is a collection of random work portfo
 :gutter: 2
 
 :::{grid-item-card} 
-:link: /workspaces/porfolio-deeplearning/newbook/_build/html/ACT_1.html
-:link-type: doc
-:class-header: bg-light text-center
-:class-title: text-large
-
 ### PyTorch Basics
 
 Given with this simple pipeline, we will try out how PyTorch works with this simple academic activity from my Deep Learning Class.
+[Go to notebook →](ACT_1.ipynb)
 :::
 
 ::::
