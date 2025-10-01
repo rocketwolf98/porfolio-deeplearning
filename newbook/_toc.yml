@@ -1,13 +1,16 @@
 # Table of contents
 # Learn more at https://jupyterbook.org/customize/toc.html
-
 format: jb-book
 root: intro
-chapters:
-- file: newbook/intro.md
-- file: ACT_1.ipynb
-- file: ACT_2.ipynb
-- file: ACT_3.ipynb
-- file: ACT_4.ipynb
-- file: ACT_5.ipynb
-
+parts:
+  - caption: Introduction
+    chapters:
+      - file: newbook/intro
+  
+  - caption: Activities
+    chapters:
+      - file: ACT_1
+      - file: ACT_2
+      - file: ACT_3
+      - file: ACT_4
+      - file: ACT_5
