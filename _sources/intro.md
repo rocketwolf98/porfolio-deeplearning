@@ -7,7 +7,7 @@ Welcome to my corner of the internet. This is a collection of random work portfo
 :gutter: 2
 
 :::{grid-item-card} 
-:link: ACT1
+:link: ./newbook/ACT_1.ipynb
 :link-type: doc
 :class-header: bg-light text-center
 :class-title: text-large
