@@ -1,11 +1,18 @@
-# Welcome to your Jupyter Book
+# 🐺 Welcome to rocketwolflab
 
-This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
+::::{grid} 1 1 2 2
+:gutter: 3
 
-Check out the content pages bundled with this sample book to see more. 
+:::{grid-item-card} 🚀 About This Lab
+:class-header: bg-light
+Welcome to my corner of the internet. This is a collection of random work portfolios made out of requirement (or maybe fun). From simple experiments to complex technical deep-dives that I'm still trying to fully grasp myself.
+:::
 
+## 📚 All Projects
+
+::::{grid} 1 1 2 2
+:gutter: 3
+
+:::{grid-item-card} 
+:class-header: bg-light
 ```{tableofcontents}
-```

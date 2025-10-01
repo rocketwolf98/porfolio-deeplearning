@@ -21,7 +21,9 @@ bibtex_bibfiles:
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/rocketwolf98  # Online location of your book
+  url: https://github.com/rocketwolf98/porfolio-deeplearning
+  path_to_book: ""
+  branch: main
 
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
