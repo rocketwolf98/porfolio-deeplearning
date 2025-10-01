@@ -34,3 +34,42 @@ nav.bd-links a:hover {
 
 /* Remove focus/visited link colors that might show blue */
 .bd-sidebar a:focus
+
+/* Light theme background */
+html[data-theme="light"] {
+    background-color: #ffffff;
+    background-image: url('tile-light.png');
+    background-repeat: repeat; /* or repeat-x, repeat-y, no-repeat */
+    background-size: auto; /* or specific size like 200px */
+    background-attachment: fixed; /* keeps background fixed while scrolling */
+}
+
+html[data-theme="light"] body {
+    background-color: transparent; /* Let the html background show through */
+}
+
+/* Dark theme background */
+html[data-theme="dark"] {
+    background-color: #1e1e1e;
+    background-image: url('tile.png');
+    background-repeat: repeat;
+    background-size: auto;
+    background-attachment: fixed;
+}
+
+html[data-theme="dark"] body {
+    background-color: transparent;
+}
+
+/* Optional: Add opacity/overlay to content area */
+html[data-theme="light"] .bd-main .bd-content {
+    background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent white */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+html[data-theme="dark"] .bd-main .bd-content {
+    background-color: rgba(30, 30, 30, 0.95); /* Semi-transparent dark */
+    padding: 20px;
+    border-radius: 8px;
+}
