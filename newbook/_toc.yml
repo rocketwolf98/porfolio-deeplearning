@@ -6,4 +6,8 @@ root: intro
 chapters:
 - file: newbook/intro.md
 - file: ACT_1.ipynb
+- file: ACT_2.ipynb
+- file: ACT_3.ipynb
+- file: ACT_4.ipynb
+- file: ACT_5.ipynb
 
