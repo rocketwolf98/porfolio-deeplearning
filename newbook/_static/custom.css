@@ -112,7 +112,9 @@ nav.bd-links a:hover { text-decoration: none !important; border-bottom: none !im
 }
 .bd-sidebar .active,
 .bd-sidebar .current > a {
-    color: #dc3545 !important;
+    background-color: #dc354620 !important;
+    box-shadow: inset max(3px, .1875rem 3px , .12em) 0 0 #dc3545 !important;
+
 }
 
 /* ============================================
