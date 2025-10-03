@@ -131,11 +131,11 @@ nav.bd-links a:hover { text-decoration: none !important; border-bottom: none !im
    CARDS (Glass Effect)
    ============================================ */
 .sd-card {
-  background: rgba(40, 40, 40, 0.45);   /* semi-transparent */
+  background: rgba(40, 40, 40, 0);   /* semi-transparent */
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);  /* Safari fix */
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 14px; /* optional, makes them smoother */
+  border: 1px solid #dc3545;
+  border-radius: 8px; /* optional, makes them smoother */
   box-shadow: 0 4px 12px rgba(0,0,0,0.25); /* subtle depth */
 }
 /* ============================================
