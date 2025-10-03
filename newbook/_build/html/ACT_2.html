@@ -35,7 +35,7 @@
     <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=eb6b19ce" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=9bc84a4b" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -361,7 +361,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -377,6 +379,14 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#by-kenneth-lim">By Kenneth Lim</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -388,7 +398,8 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="calculating-forward-pass">
 <h1>Calculating Forward Pass <br><a class="headerlink" href="#calculating-forward-pass" title="Link to this heading">#</a></h1>
-<p>By Kenneth Lim</p>
+<section id="by-kenneth-lim">
+<h2>By Kenneth Lim<a class="headerlink" href="#by-kenneth-lim" title="Link to this heading">#</a></h2>
 <p>Thanks to Linear Algebra, we are now able to let computers be able to think like humans and to think like humans means someday we can destroy CAPTCHA or obliterate the Turing Test entirely. In this activity, we will explore a simple implementation on how do we calculate forward pass using a very simple representation just like how we overthink how a brain of person with high amounts of IQ work.</p>
 <p>Given that we have:</p>
 <div class="math notranslate nohighlight">
@@ -479,6 +490,7 @@ y_{\text{error}} = 0.88
 \)</span>$</p>
 <p>Quite far from what we would like to predict as 1</p>
 </section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -534,6 +546,21 @@ y_{\text{error}} = 0.88
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#by-kenneth-lim">By Kenneth Lim</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
