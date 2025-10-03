@@ -100,6 +100,7 @@ html[data-theme="light"] .bd-sidebar-primary a {
     flex-direction: column;
     justify-content: flex-start; /* items stay at the top */
     min-height: 100%;
+    position: fixed;
 }
 html[data-theme="light"] .bd-sidebar-secondary {
     background: rgba(255, 255, 255, 0.5) !important;
