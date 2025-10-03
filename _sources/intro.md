@@ -12,6 +12,16 @@ Welcome to my corner of the internet. This is a collection of random work portfo
 :link: ACT_1
 :link-type: doc
 
+### 📝
+#### When AI Takes the Universe
+
+OIIAIAIIIOIIA
+:::
+
+:::{grid-item-card} 
+:link: ACT_1
+:link-type: doc
+
 ### ❤️‍🔥
 #### PyTorch Basics
 
