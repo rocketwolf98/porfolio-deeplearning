@@ -12,7 +12,6 @@
 /* ============================================
    THEME BACKGROUNDS
    ============================================ */
-/* Light theme */
 html[data-theme="light"] {
     background-color: #ffffff;
     background-image: url('tile-light.png');
@@ -20,12 +19,8 @@ html[data-theme="light"] {
     background-size: auto;
     background-attachment: fixed;
 }
+html[data-theme="light"] body { background-color: transparent; }
 
-html[data-theme="light"] body {
-    background-color: transparent;
-}
-
-/* Dark theme */
 html[data-theme="dark"] {
     background-color: #1e1e1e;
     background-image: url('tile.png');
@@ -33,10 +28,7 @@ html[data-theme="dark"] {
     background-size: auto;
     background-attachment: fixed;
 }
-
-html[data-theme="dark"] body {
-    background-color: transparent;
-}
+html[data-theme="dark"] body { background-color: transparent; }
 
 /* ============================================
    HEADER & FOOTER
@@ -47,7 +39,6 @@ html[data-theme="dark"] body {
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
-
 .bd-footer {
     background: rgba(20, 20, 20, 0.2) !important;
     backdrop-filter: blur(10px);
@@ -56,7 +47,21 @@ html[data-theme="dark"] body {
 }
 
 /* ============================================
-   SIDEBAR
+   HEADER ARTICLE BAR (top title bar under header)
+   ============================================ */
+.bd-header-article {
+    background: rgba(20, 20, 20, 0.25) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+html[data-theme="light"] .bd-header-article {
+    background: rgba(255, 255, 255, 0.5) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* ============================================
+   SIDEBAR (Left)
    ============================================ */
 .bd-sidebar-primary {
     background: rgba(20, 20, 20, 0.25) !important;
@@ -64,23 +69,31 @@ html[data-theme="dark"] body {
     -webkit-backdrop-filter: blur(12px);
     border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
+.bd-sidebar { background-color: transparent !important; }
 
-.bd-sidebar {
-    background-color: transparent !important;
-}
-
-/* Sidebar items */
 .bd-sidebar-primary .list-caption,
 .bd-sidebar-primary a {
     background-color: transparent;
     padding: 5px 10px;
     border-radius: 4px;
 }
-
-/* Light theme sidebar items */
 html[data-theme="light"] .bd-sidebar-primary .list-caption,
 html[data-theme="light"] .bd-sidebar-primary a {
     background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* ============================================
+   SIDEBAR (Right Contents / TOC)
+   ============================================ */
+.bd-sidebar-secondary {
+    background: rgba(20, 20, 20, 0.25) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+html[data-theme="light"] .bd-sidebar-secondary {
+    background: rgba(255, 255, 255, 0.5) !important;
+    border-left: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 /* ============================================
@@ -90,20 +103,11 @@ html[data-theme="light"] .bd-sidebar-primary a {
     text-decoration: none !important;
     border-bottom: none !important;
 }
-
-nav.bd-links a:hover {
-    text-decoration: none !important;
-    border-bottom: none !important;
-}
-
-/* Hover effect */
+nav.bd-links a:hover { text-decoration: none !important; border-bottom: none !important; }
 .bd-sidebar a:hover {
     color: #dc3545 !important;
-    text-decoration: none !important;
     background-color: rgba(220, 53, 69, 0.1) !important;
 }
-
-/* Active navigation item */
 .bd-sidebar .active,
 .bd-sidebar .current > a {
     color: #dc3545 !important;
@@ -114,10 +118,7 @@ nav.bd-links a:hover {
 /* ============================================
    MAIN CONTENT AREA
    ============================================ */
-.bd-main {
-    background-color: transparent !important;
-}
-
+.bd-main { background-color: transparent !important; }
 .bd-main .bd-content {
     background-color: transparent !important;
     padding: 20px;
@@ -128,15 +129,13 @@ nav.bd-links a:hover {
    CARDS (Glass Effect)
    ============================================ */
 .cards .card {
-    background: rgba(255, 255, 255, 0.08);  /* slightly see-through */
+    background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
 }
-
-/* Light theme cards */
 html[data-theme="light"] .cards .card {
     background: rgba(255, 255, 255, 0.6);
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -145,21 +144,9 @@ html[data-theme="light"] .cards .card {
 /* ============================================
    FULL WIDTH EXPANSION
    ============================================ */
-.bd-container {
-  max-width: 100% !important;
-  width: 100% !important;
-}
-
-.bd-container .bd-container__inner {
-  max-width: 100% !important;
-  width: 100% !important;
-}
-
-.bd-main .bd-content .bd-article-container {
-  max-width: 100% !important;
-  width: 100% !important;
-}
-
+.bd-container,
+.bd-container .bd-container__inner,
+.bd-main .bd-content .bd-article-container,
 .bd-page-width {
   max-width: 100% !important;
   width: 100% !important;
