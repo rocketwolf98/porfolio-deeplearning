@@ -116,6 +116,13 @@ nav.bd-links a:hover { text-decoration: none !important; border-bottom: none !im
     box-shadow: inset max(3px, .1875rem 3px , .12em) 0 0 #dc3545 !important;
 }
 
+nav.bd-links .current>a {
+    background-color: #dc35460c !important;
+    box-shadow: inset max(3px, .1875rem, .12em) 0 0 #dc3545;
+    color: var(--pst-color-primary);
+    font-weight: 600;
+}
+
 /* ============================================
    MAIN CONTENT AREA
    ============================================ */
