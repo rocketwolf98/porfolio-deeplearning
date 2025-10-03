@@ -7,6 +7,10 @@ parts:
     chapters:
       - file: newbook/intro
   
+  - caption: Essays
+    chapters:
+      - file: ACT_0
+
   - caption: Activities
     chapters:
       - file: ACT_1
