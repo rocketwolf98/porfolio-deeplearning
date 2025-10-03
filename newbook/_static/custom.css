@@ -92,6 +92,10 @@ html[data-theme="light"] .bd-sidebar-primary a {
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-left: 1px solid rgba(255, 255, 255, 0.1);
+    height: 100vh;      /* sidebar fills the viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* items stay at the top */
 }
 html[data-theme="light"] .bd-sidebar-secondary {
     background: rgba(255, 255, 255, 0.5) !important;
