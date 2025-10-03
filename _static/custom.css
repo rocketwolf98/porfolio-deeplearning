@@ -141,9 +141,14 @@ nav.bd-links a:hover { text-decoration: none !important; border-bottom: none !im
    ============================================ */
 .bd-container,
 .bd-container .bd-container__inner,
-.bd-main .bd-content .bd-article-container,
+.bd-main
+
+.bd-content {
+    padding: 0 !important;
+}
+
+.bd-article-container,
 .bd-page-width {
   max-width: 100% !important;
   width: 100% !important;
-  padding: 0 !important;
 }
