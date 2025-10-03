@@ -51,8 +51,9 @@ html[data-theme="dark"] body { background-color: transparent; }
    ============================================ */
 .bd-header-article {
     background: rgba(20, 20, 20, 0.25) !important;
-    /* backdrop-filter: blur(12px); */
-    /* -webkit-backdrop-filter: blur(12px); */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 0 !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 html[data-theme="light"] .bd-header-article {
