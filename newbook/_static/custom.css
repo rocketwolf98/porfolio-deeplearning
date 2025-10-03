@@ -70,6 +70,9 @@ html[data-theme="light"] .bd-header-article {
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-right: 1px solid rgba(255, 255, 255, 0);
+    -webkit-scrollbar {
+  display: none; /* Hides the scrollbar */
+}
 }
 .bd-sidebar { background-color: transparent !important; }
 
