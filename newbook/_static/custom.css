@@ -53,8 +53,6 @@ html[data-theme="dark"] body { background-color: transparent; }
     background: rgba(20, 20, 20, 0.25) !important;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    padding: 0 !important;
-    margin: 0 !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 html[data-theme="light"] .bd-header-article {
@@ -147,4 +145,5 @@ nav.bd-links a:hover { text-decoration: none !important; border-bottom: none !im
 .bd-page-width {
   max-width: 100% !important;
   width: 100% !important;
+  padding: 0 !important;
 }
