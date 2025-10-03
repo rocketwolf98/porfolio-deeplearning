@@ -49,6 +49,7 @@ html[data-theme="dark"] body { background-color: transparent; }
 /* ============================================
    HEADER ARTICLE BAR (top title bar under header)
    ============================================ */
+/* Default header styles */
 .bd-header-article {
     background: rgba(20, 20, 20, 0.25) !important;
     backdrop-filter: blur(12px);
@@ -57,9 +58,15 @@ html[data-theme="dark"] body { background-color: transparent; }
     padding-top: 8px;
     padding-bottom: 8px;
 }
+
 html[data-theme="light"] .bd-header-article {
     background: rgba(255, 255, 255, 0) !important;
     border-bottom: 1px solid rgba(0, 0, 0, 0);
+}
+
+/* When the right sidebar is hidden, let header span full width */
+.bd-sidebar-secondary:has(nav ul:empty) ~ .bd-header-article {
+    grid-column: 1 / -1;   /* force it to span the full grid */
 }
 
 /* ============================================
