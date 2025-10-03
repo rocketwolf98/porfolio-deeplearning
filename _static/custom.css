@@ -54,6 +54,8 @@ html[data-theme="dark"] body { background-color: transparent; }
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 8px;
+    padding-bottom: 8px;
 }
 html[data-theme="light"] .bd-header-article {
     background: rgba(255, 255, 255, 0) !important;
@@ -147,8 +149,13 @@ nav.bd-links a:hover { text-decoration: none !important; border-bottom: none !im
     padding: 0 !important;
 }
 
-.bd-article-container,
 .bd-page-width {
   max-width: 100% !important;
   width: 100% !important;
+}
+
+.bd-main .bd-content .bd-article-container .bd-article {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 4rem;
 }
