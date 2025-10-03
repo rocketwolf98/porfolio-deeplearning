@@ -3,10 +3,7 @@
 format: jb-book
 root: intro
 parts:
-  - caption: Introduction
-    chapters:
-      - file: newbook/intro
-  
+ 
   - caption: Essays
     chapters:
       - file: ACT_0
