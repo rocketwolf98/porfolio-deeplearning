@@ -132,3 +132,27 @@ nav.bd-links a:hover {
 html[data-theme="light"] .bd-main .bd-content {
     background-color: rgba(255, 255, 255, 0) !important;
 }
+
+/* Expand the outermost container */
+.bd-container {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+/* The inner wrapper */
+.bd-container .bd-container__inner {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+/* The article / content section */
+.bd-main .bd-content .bd-article-container {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+/* Adjust the page wrapper (header nav + content) */
+.bd-page-width {
+  max-width: 100% !important;
+  width: 100% !important;
+}
