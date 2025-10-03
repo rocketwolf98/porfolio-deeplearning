@@ -9,7 +9,7 @@ Welcome to my corner of the internet. This is a collection of random work portfo
 :gutter: 2
 
 :::{grid-item-card} 
-:link: ACT_1
+:link: ACT_0
 :link-type: doc
 
 ### 📝
@@ -19,7 +19,7 @@ OIIAIAIIIOIIA
 :::
 
 :::{grid-item-card} 
-:link: ACT_0
+:link: ACT_1
 :link-type: doc
 
 ### ❤️‍🔥
