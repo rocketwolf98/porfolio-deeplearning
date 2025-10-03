@@ -42,31 +42,37 @@ html[data-theme="dark"] body {
    HEADER & FOOTER
    ============================================ */
 .bd-header {
-    background-color: transparent !important;
-    /* backdrop-filter: blur(10px); */
+    background: rgba(20, 20, 20, 0.3) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .bd-footer {
-    background-color: transparent !important;
-    /* backdrop-filter: blur(10px); */
+    background: rgba(20, 20, 20, 0.2) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* ============================================
    SIDEBAR
    ============================================ */
 .bd-sidebar-primary {
-    background-color: transparent !important;
-    /* backdrop-filter: blur(10px); */
+    background: rgba(20, 20, 20, 0.25) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .bd-sidebar {
     background-color: transparent !important;
 }
 
-/* Sidebar items with slight transparency */
+/* Sidebar items */
 .bd-sidebar-primary .list-caption,
 .bd-sidebar-primary a {
-    background-color: rgba(0, 0, 0, 0);
+    background-color: transparent;
     padding: 5px 10px;
     border-radius: 4px;
 }
@@ -74,13 +80,12 @@ html[data-theme="dark"] body {
 /* Light theme sidebar items */
 html[data-theme="light"] .bd-sidebar-primary .list-caption,
 html[data-theme="light"] .bd-sidebar-primary a {
-    background-color: rgba(255, 255, 255, 0.0);
+    background-color: rgba(255, 255, 255, 0.05);
 }
 
 /* ============================================
    NAVIGATION & LINKS
    ============================================ */
-/* Remove default underlines */
 .bd-sidebar a {
     text-decoration: none !important;
     border-bottom: none !important;
@@ -106,13 +111,6 @@ nav.bd-links a:hover {
     background-color: rgba(220, 53, 69, 0.1) !important;
 }
 
-/* Remove focus/visited link colors */
-.bd-sidebar a:focus,
-.bd-sidebar a:visited {
-    color: inherit !important;
-    text-decoration: none !important;
-}
-
 /* ============================================
    MAIN CONTENT AREA
    ============================================ */
@@ -120,38 +118,48 @@ nav.bd-links a:hover {
     background-color: transparent !important;
 }
 
-/* Content area with transparency */
 .bd-main .bd-content {
-    background-color: rgba(30, 30, 30, 0) !important;
-    /* backdrop-filter: blur(5px); */
+    background-color: transparent !important;
     padding: 20px;
     border-radius: 8px;
 }
 
-/* Light theme content area */
-html[data-theme="light"] .bd-main .bd-content {
-    background-color: rgba(255, 255, 255, 0) !important;
+/* ============================================
+   CARDS (Glass Effect)
+   ============================================ */
+.cards .card {
+    background: rgba(255, 255, 255, 0.08);  /* slightly see-through */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
 }
 
-/* Expand the outermost container */
+/* Light theme cards */
+html[data-theme="light"] .cards .card {
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+   FULL WIDTH EXPANSION
+   ============================================ */
 .bd-container {
   max-width: 100% !important;
   width: 100% !important;
 }
 
-/* The inner wrapper */
 .bd-container .bd-container__inner {
   max-width: 100% !important;
   width: 100% !important;
 }
 
-/* The article / content section */
 .bd-main .bd-content .bd-article-container {
   max-width: 100% !important;
   width: 100% !important;
 }
 
-/* Adjust the page wrapper (header nav + content) */
 .bd-page-width {
   max-width: 100% !important;
   width: 100% !important;
