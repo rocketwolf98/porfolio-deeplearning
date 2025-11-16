@@ -5,7 +5,7 @@ Computer scientists so as mathematicians has unlocked the ability of our machine
 
 As defined in the article from Belcic and Stryker from IBM, this governs how much a model adjusts its parameters at each step of its optimization algorithm. To make it sound human, it adjusts how much information you'll be getting through your study session while overthinking whether you'll be passing the test or not. This hyperparameter ensures that your model learns well without under or overcompensating, else your model may learn maybe nothing at all or be too considerate.
 
-![Bokuto-san, I'm not even your brother.](images/Pasted image 20251115211620.png)
+![Bokuto-san, I'm not even your brother.](./images/Pasted%20image%2020251115211620.png)
 *"Bokuto-san, I'm not even your brother."*
 
 Okay, enough of this silly joke with my illustration featuring characters from a volleyball anime franchise but this is simple but complex example if your model learns too much or barely at all. Assuming that you read a government form that asks you for *significant other*, overgeneralizing it means it assumes that this *significant other* is someone who takes care of you, regardless it could be your partner, your best friend, or maybe your neighbor. Under generalizing it means *obviously*, you don't know what it means at all. A good learning rate assumes that this *significant other* is a key person that is related to you, such as your partner, children, or anyone related by blood.
@@ -16,12 +16,12 @@ Learning rate parameters usually range from 0.0 to 1.0. A common rule of thumb u
 
 Okay, sometimes the learning rate doesn't work itself alone. The number of epochs and the choice of optimizers really do matter in training your model. Epochs sets how many times your model should learn all the information in the dataset that you are training with but setting it costs a warning. Giving it too low causes the model never to converge: it learns too little or nothing at all. Giving it way too high causes it to overfit: meaning, it learns but its limited to what it sees but never generalizes on something new.
 
-![[Pasted image 20251116084925.png]]
+!["You just memorized the tax form Bokuto-san... Not the idea of it."](./images/Pasted%20image%2020251116084925.png)
 *"You just memorized the tax form Bokuto-san... Not the idea of it."*
 
 Okay enough with the other illustration. Optimizers on the other hand, tell the model how it should learn. A good example is the Stochastic Gradient Descent, a variant of the Gradient Descent where its aims to minimize the error iteratively using random samples from small batches rather than the whole dataset. The amount of the given learning rate determines how much steps the optimizer should learn until reaching convergence: meaning, the loss has stabilized or and never further decreases.
 
-![[Pasted image 20251116105830.png]]
+![SGD Steps Diagram](./images/Pasted%20image%2020251116105830.png)
 *From Gutowska (2025) of IBM. This diagram explains how the learning rate affects the choice of optimizer (SGD in this graph). Lower learning rates show a very steady descent until reaching the point of convergence while higher learning rates show instability, making it difficult to reach convergence. Take note that the choice of optimizer should get along to the learning rate of choice as sometimes, setting it low causes it to learn too slow, higher makes it very unstable.*
 
 <h4>Let's Try it Out!</h4>
@@ -91,7 +91,7 @@ plt.show()
 display_image(images)
 ```
 
-![[Pasted image 20251116114653.png]]
+![Preview of images](./images/Pasted%20image%2020251116114653.png)
 *Here's a little preview of our images to be trained for our model.*
 
 This is a very rudimentary CNN model made for this dataset with just two convolutional layers. We're just explaining how impactful learning rates are in this case.
@@ -245,7 +245,7 @@ plt.legend()
 plt.show()
 ```
 
-![[Pasted image 20251116121120.png]]
+![](./images/Pasted%20image%2020251116121120.png)
 *Not much overfitting is shown as it reaching to the last accuracy per epoch and has shown level of convergence.*
 
 ```python
@@ -261,7 +261,7 @@ plt.legend()
 plt.show()
 ```
 
-![[Pasted image 20251116121321.png]]
+![](./images/Pasted%20image%2020251116121321.png)
 *An interesting spike at epoch 2, implying that the model was surprised to see something new until stabilizing at later epochs. This is a common quirk on an SGD optimizer.*
 
 Okay, it seems like our model is learning quite well showing a very minimal loss at 0.07 and an accuracy of 98.49% implying that our model with these parameters are trained well! Let's go to the next part where what if...
@@ -269,57 +269,61 @@ Okay, it seems like our model is learning quite well showing a very minimal loss
 <h4>The learning rate seems extreme?</h4>
 Given the same parameters but the learning rate is 0.5, that would be way too high but let's take a look on how our accuracy and loss curves may look like. To change it, go back to the *optimizer* variable and change the learning rate (*lr*) hyperparameter and set to 0.5.
 
-![[Pasted image 20251116122734.png]]
+![](./images/Pasted%20image%2020251116122734.png)
 *Our accuracy score seems terribly low! Let alone it's not even rising or learning at all.*
 
-![[Pasted image 20251116122837.png]]
+![](./images/Pasted%20image%2020251116122837.png)
 *Loss also seems higher than our previous setup. Also we notice that the movements of train and validation are at random implying that it doesn't reach convergence or as mentioned earlier, learning anything.*
 
 To put up a simple analogy, a **huge learning rate means you just simply scanned a book without even picking up anything**. Since our ace in the illustration is rushing through his tax forms, he skips through all that information, in which, he is not learning anything...
 
-![[Pasted image 20251116173304.png]]
+![](./images/Pasted%20image%2020251116173304.png)
 *"Bokuto-san, you need to read and understand them very carefully... LIKE one step at a time...*
 
 <h4>How about way too low?</h4>
 
 Given the same parameters but the learning rate is 0.0001, that would be very low but let's take a look on how our accuracy and loss curves may look like. To change it, go back to the *optimizer* variable and change the learning rate (*lr*) hyperparameter and set to 0.0001 .
 
-![[Pasted image 20251116123729.png]]
+![](./images/Pasted%20image%2020251116123729.png)
 *It's learning anything and rises linearly. But still ending at epoch 5, we see that the accuracy is still quite low.*
 
-![[Pasted image 20251116123816.png]]
+![](./images/Pasted%20image%2020251116123816.png)
 *Loss on the other hand, is also decreasing and barely any explosive gradient is observed. We can see that the model is learning slowly, but still not reaching convergence.*
 
 One way we can solve this issue is to increase number of epochs. Let's assume that we set these number of epochs at 15 and let's see how it fares out...
 
-![[Pasted image 20251116124649.png]]
+![](./images/Pasted%20image%2020251116124649.png)
 *Increasing epochs with the same learning rate quite helps, improving the learning quality of our model and the model was smoothly learning.*
 
-![[Pasted image 20251116124903.png]]
+![](./images/Pasted image 20251116124903.png)
 *Loss on the other hand shows  that it is learning despite some explosive gradients around 12 in validation and 13 in train. However, validation continues to stabilize beyond 15 and in fact still hasn't reached model convergence on our setup.*
 
 This method may help however the time for training would be terribly slow and time consuming. To put this into analogy, **It's like slowly skimming through the details, regardless on how mundane this information is**. Now our ace is told to read this very carefully, he literally took the word carefully by heart. Except... The submission for tax returns are almost due...
 
-![[Pasted image 20251116175126.png]]
+![](./images/Pasted%20image%2020251116175126.png)
 *You don't need to read and understand everything on the paper Bokuto-san, just get the idea of what's important. In the property section, write down your condo unit and did you remember how much?*
 <h4>To Sum it Up...</h4>
 Learning rate is a vital parameter that aids the model's ability to generalize information especially how much information it needs to be able to learn. This parameter does not work alone with the choice of other parameters such as optimizers and epochs. The bottomline here is that there is no default standard parameter for a learning rate especially in dealing much more complex datasets. So set your parameters and the choice of models well. This will ace up your model's capability in generalizing information depending on your use case.
 
 Also, pay your taxes properly!
 
-![[Pasted image 20251116182951.png]]
+![](./images/Pasted%20image%2020251116182951.png)
 *"He may not get it right now but at least he submitted the tax forms on time..." - Akaashi, K.*
 
 <h4>If you want to know more...</h4>
 Here are some curated articles in relation to this topic!
+
 - [What is learning rate in machine learning? - IBM](https://www.ibm.com/think/topics/learning-rate)
 - [What is stochastic gradient descent? - IBM](https://www.ibm.com/think/topics/stochastic-gradient-descent)
 - [Optimizers in Deep Learning - Medium](https://musstafa0804.medium.com/optimizers-in-deep-learning-7bf81fed78a0)
 - [Epochs in Machine Learning - GeeksforGeeks](https://www.geeksforgeeks.org/machine-learning/epoch-in-machine-learning/)
 
 <h4>References</h4>
+
 - Belcic, I., & Stryker, C. (2025, October 21). _What is learning rate in machine learning?_. IBM. https://www.ibm.com/think/topics/learning-rate
+
 - GeeksforGeeks. (2025, July 23). _Learning rate in neural network_. https://www.geeksforgeeks.org/machine-learning/impact-of-learning-rate-on-a-model/
+
 - Gutowska, A. (2025, October 21). _What is stochastic gradient descent?_. IBM. https://www.ibm.com/think/topics/stochastic-gradient-descent
 
 *Sidenote: Learn ML and read Haikyuu!!*
