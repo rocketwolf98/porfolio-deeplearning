@@ -69,3 +69,15 @@ You may not see some news here but the computers can now see numbers. Here's how
 :::
 
 ::::
+
+:::{grid-item-card} 
+:link: ACT_6
+:link-type: doc
+
+### 🦉
+#### The Ace of Training Parameters - The Learning Rate
+
+HEY HEY HEY!!! In this silly guide, we explore why learning rate is what we call the Ace of Training Parameters.
+:::
+
+::::
