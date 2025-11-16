@@ -295,7 +295,7 @@ One way we can solve this issue is to increase number of epochs. Let's assume th
 ![](./images/Pasted-image-20251116124649.png)
 *Increasing epochs with the same learning rate quite helps, improving the learning quality of our model and the model was smoothly learning.*
 
-![](./images/Pasted image 20251116124903.png)
+![](./images/Pasted-image-20251116124903.png)
 *Loss on the other hand shows  that it is learning despite some explosive gradients around 12 in validation and 13 in train. However, validation continues to stabilize beyond 15 and in fact still hasn't reached model convergence on our setup.*
 
 This method may help however the time for training would be terribly slow and time consuming. To put this into analogy, **It's like slowly skimming through the details, regardless on how mundane this information is**. Now our ace is told to read this very carefully, he literally took the word carefully by heart. Except... The submission for tax returns are almost due...
