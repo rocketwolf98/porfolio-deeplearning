@@ -5,7 +5,7 @@ Computer scientists so as mathematicians has unlocked the ability of our machine
 
 As defined in the article from Belcic and Stryker from IBM, this governs how much a model adjusts its parameters at each step of its optimization algorithm. To make it sound human, it adjusts how much information you'll be getting through your study session while overthinking whether you'll be passing the test or not. This hyperparameter ensures that your model learns well without under or overcompensating, else your model may learn maybe nothing at all or be too considerate.
 
-![[Pasted image 20251115211620.png]]
+![Bokuto-san, I'm not even your brother.](images/Pasted image 20251115211620.png)
 *"Bokuto-san, I'm not even your brother."*
 
 Okay, enough of this silly joke with my illustration featuring characters from a volleyball anime franchise but this is simple but complex example if your model learns too much or barely at all. Assuming that you read a government form that asks you for *significant other*, overgeneralizing it means it assumes that this *significant other* is someone who takes care of you, regardless it could be your partner, your best friend, or maybe your neighbor. Under generalizing it means *obviously*, you don't know what it means at all. A good learning rate assumes that this *significant other* is a key person that is related to you, such as your partner, children, or anyone related by blood.
