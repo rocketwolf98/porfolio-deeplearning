@@ -49,6 +49,7 @@ html[data-theme="dark"] body { background-color: transparent; }
 /* ============================================
    HEADER ARTICLE BAR (top title bar under header)
    ============================================ */
+/* Default header styles */
 .bd-header-article {
     background: rgba(20, 20, 20, 0.25) !important;
     backdrop-filter: blur(12px);
@@ -57,9 +58,15 @@ html[data-theme="dark"] body { background-color: transparent; }
     padding-top: 8px;
     padding-bottom: 8px;
 }
+
 html[data-theme="light"] .bd-header-article {
     background: rgba(255, 255, 255, 0) !important;
     border-bottom: 1px solid rgba(0, 0, 0, 0);
+}
+
+/* When the right sidebar is hidden, let header span full width */
+.bd-sidebar-secondary:has(nav ul:empty) ~ .bd-header-article {
+    grid-column: 1 / -1;   /* force it to span the full grid */
 }
 
 /* ============================================
@@ -70,9 +77,6 @@ html[data-theme="light"] .bd-header-article {
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-right: 1px solid rgba(255, 255, 255, 0);
-    -webkit-scrollbar {
-  display: none; /* Hides the scrollbar */
-}
 }
 .bd-sidebar { background-color: transparent !important; }
 
@@ -95,20 +99,27 @@ html[data-theme="light"] .bd-sidebar-primary a {
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-left: 1px solid rgba(255, 255, 255, 0.1);
-    height: auto;      /* sidebar fills the viewport */
+
+    /* make it stick on the right */
+    position: sticky;
+    top: 0;
+    right: 0;
+
+    height: 100vh;          /* fill viewport height */
     display: flex;
     flex-direction: column;
     justify-content: flex-start; /* items stay at the top */
-    min-height: 100%;
+    overflow-y: auto;       /* scroll if content overflows */
 }
+
 html[data-theme="light"] .bd-sidebar-secondary {
     background: rgba(255, 255, 255, 0.5) !important;
     border-left: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-/* Hide the right sidebar if it's empty */
+/* Hide the right sidebar if there's no nav items */
 .bd-sidebar-secondary:has(nav ul:empty) {
-  display: none;
+    display: none !important;
 }
 
 
