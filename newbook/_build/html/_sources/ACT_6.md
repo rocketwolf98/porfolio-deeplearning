@@ -1,5 +1,5 @@
-# The Ace of Training Parameters - The Learning Rate
-#Exploring the impact of learning rate, how does it work, and balancing out your model's learning ability. 
+#  The Ace of Training Parameters - The Learning Rate
+#### Exploring the impact of learning rate, how does it work, and balancing out your model's learning ability. 
 
 Computer scientists so as mathematicians has unlocked the ability of our machines to comprehend what do humans see, think, or even comprehend. As humans learn naturally through experience, computers learn through data and some certain parameter setups and  that is why out of the plethora of hyperparameters, we will focus here on learning rate. We call this the ace of training parameters because it controls how much your model learns in the training process.
 
@@ -13,7 +13,7 @@ Okay, enough of this silly joke with my illustration featuring characters from a
 
 Learning rate parameters usually range from 0.0 to 1.0. A common rule of thumb usually sets that the learning rate should go along with the number of epochs and even the choice of optimizer. Wait... What the heck are epochs and  an optimizer?
 
-#It doesn't work alone! 
+#### It doesn't work alone! 
 
 Okay, sometimes the learning rate doesn't work itself alone. The number of epochs and the choice of optimizers really do matter in training your model. Epochs sets how many times your model should learn all the information in the dataset that you are training with but setting it costs a warning. Giving it too low causes the model never to converge: it learns too little or nothing at all. Giving it way too high causes it to overfit: meaning, it learns but its limited to what it sees but never generalizes on something new.
 
@@ -27,11 +27,11 @@ Okay enough with the other illustration. Optimizers on the other hand, tell the 
 
 *From Gutowska (2025) of IBM. This diagram explains how the learning rate affects the choice of optimizer (SGD in this graph). Lower learning rates show a very steady descent until reaching the point of convergence while higher learning rates show instability, making it difficult to reach convergence. Take note that the choice of optimizer should get along to the learning rate of choice as sometimes, setting it low causes it to learn too slow, higher makes it very unstable.*
 
-#Let's Try it Out! 
+#### Let's Try it Out! 
 We will test out how learning rate affects model convergence by looking at the graph of learning rates and the quality of predictions. We will be using a very small dataset from MNIST and a very simple CNN. You can opt to copy and paste to or rather code along.
 
 ```python
-# We will import the packages first
+####  We will import the packages first
 
 import torch
 import torch.nn as nn
@@ -133,10 +133,10 @@ class CNN(nn.Module):
 In this first part of our demonstration, we will try out an SGD optimizer with a learning rate of 0.01 (a common learning rate in SGD).
 
 ```python
-#We'll instantiate the class before we can be able to use it
+#### We'll instantiate the class before we can be able to use it
 model = CNN()
 
-#We then set up the criterion and optimizer
+#### We then set up the criterion and optimizer
 criterion = nn.CrossEntropyLoss()
 optimizer = torch.optim.SGD(model.parameters(), lr=0.01)
 ```
@@ -152,7 +152,7 @@ model = model.to(device)
 ```
 
 ```python
-#Setting up our training and variables to store our training info
+#### Setting up our training and variables to store our training info
 
 epochs = 5
 start_time = time.time()
@@ -182,10 +182,10 @@ for e in range(epochs):
         train_pred = model(x_train)
         train_loss = criterion(train_pred, y_train)
 
-        train_pred_vec = torch.max(train_pred.data, 1)[1] # prediction vector
+        train_pred_vec = torch.max(train_pred.data, 1)[1] ####  prediction vector
         train_corr += (train_pred_vec == y_train).sum()
 
-        # Update parameters
+        ####  Update parameters
         optimizer.zero_grad()
         train_loss.backward()
         optimizer.step()
@@ -226,7 +226,7 @@ for e in range(epochs):
 print(f'\nDuration: {time.time() - start_time:.0f} seconds')
 ```
 
-#Let's take a look! 
+#### Let's take a look! 
 Given that our parameters are:
 
 | Parameter     | Value                             |
@@ -238,7 +238,7 @@ Given that our parameters are:
 Let us take a look how do the train and accuracy each epoch does work along. Run this code below to take a preview of the accuracy and loss per epoch of our model might look like.
 
 ```python
-#For Accuracy per Epoch
+#### For Accuracy per Epoch
 
 plt.figure(figsize=(5,2))
 plt.plot(train_accs, label="Train")
@@ -255,7 +255,7 @@ plt.show()
 *Not much overfitting is shown as it reaching to the last accuracy per epoch and has shown level of convergence.*
 
 ```python
-#For Loss per Epoch
+#### For Loss per Epoch
 
 plt.figure(figsize=(5,2))
 plt.plot([train_losses[i-1] for i in range(5000, len(train_losses)+1, 5000)], label="Train")
@@ -273,7 +273,7 @@ plt.show()
 
 Okay, it seems like our model is learning quite well showing a very minimal loss at 0.07 and an accuracy of 98.49% implying that our model with these parameters are trained well! Let's go to the next part where what if...
 
-#The learning rate seems extreme? 
+#### The learning rate seems extreme? 
 Given the same parameters but the learning rate is 0.5, that would be way too high but let's take a look on how our accuracy and loss curves may look like. To change it, go back to the *optimizer* variable and change the learning rate (*lr*) hyperparameter and set to 0.5.
 
 ![](./images/Pasted-image-20251116122734.png)
@@ -290,7 +290,7 @@ To put up a simple analogy, a **huge learning rate means you just simply scanned
 
 *"Bokuto-san, you need to read and understand them very carefully... LIKE one step at a time...*
 
-#How about way too low? 
+#### How about way too low? 
 
 Given the same parameters but the learning rate is 0.0001, that would be very low but let's take a look on how our accuracy and loss curves may look like. To change it, go back to the *optimizer* variable and change the learning rate (*lr*) hyperparameter and set to 0.0001 .
 
@@ -318,7 +318,7 @@ This method may help however the time for training would be terribly slow and ti
 
 *You don't need to read and understand everything on the paper Bokuto-san, just get the idea of what's important. In the property section, write down your condo unit and did you remember how much?*
 
-#To Sum it Up... 
+#### To Sum it Up... 
 Learning rate is a vital parameter that aids the model's ability to generalize information especially how much information it needs to be able to learn. This parameter does not work alone with the choice of other parameters such as optimizers and epochs. The bottomline here is that there is no default standard parameter for a learning rate especially in dealing much more complex datasets. So set your parameters and the choice of models well. This will ace up your model's capability in generalizing information depending on your use case.
 
 Also, pay your taxes properly!
@@ -327,7 +327,7 @@ Also, pay your taxes properly!
 
 *"He may not get it right now but at least he submitted the tax forms on time..." - Akaashi, K.*
 
-#If you want to know more... 
+#### If you want to know more... 
 Here are some curated articles in relation to this topic!
 
 - [What is learning rate in machine learning? - IBM](https://www.ibm.com/think/topics/learning-rate)
@@ -335,7 +335,7 @@ Here are some curated articles in relation to this topic!
 - [Optimizers in Deep Learning - Medium](https://musstafa0804.medium.com/optimizers-in-deep-learning-7bf81fed78a0)
 - [Epochs in Machine Learning - GeeksforGeeks](https://www.geeksforgeeks.org/machine-learning/epoch-in-machine-learning/)
 
-#References 
+#### References 
 
 - Belcic, I., & Stryker, C. (2025, October 21). _What is learning rate in machine learning?_. IBM. https://www.ibm.com/think/topics/learning-rate
 
