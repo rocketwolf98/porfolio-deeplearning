@@ -69,7 +69,7 @@ You may not see some news here but the computers can now see numbers. Here's how
 :::
 
 :::{grid-item-card} 
-:link: ACT_6
+:link: ACT_6.md
 :link-type: doc
 
 ### 🦉
