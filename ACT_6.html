@@ -386,7 +386,6 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exploring-the-impact-of-learning-rate-how-does-it-work-and-balancing-out-your-model-s-learning-ability">Exploring the impact of learning rate, how does it work, and balancing out your model’s learning ability.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#it-doesn-t-work-alone">It doesn’t work alone!</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#let-s-try-it-out">Let’s Try it Out!</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#let-s-take-a-look">Let’s take a look!</a></li>
@@ -408,15 +407,13 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="the-ace-of-training-parameters-the-learning-rate">
 <h1>The Ace of Training Parameters - The Learning Rate<a class="headerlink" href="#the-ace-of-training-parameters-the-learning-rate" title="Link to this heading">#</a></h1>
-<section id="exploring-the-impact-of-learning-rate-how-does-it-work-and-balancing-out-your-model-s-learning-ability">
-<h2>Exploring the impact of learning rate, how does it work, and balancing out your model’s learning ability.<a class="headerlink" href="#exploring-the-impact-of-learning-rate-how-does-it-work-and-balancing-out-your-model-s-learning-ability" title="Link to this heading">#</a></h2>
+<p><strong>Exploring the impact of learning rate, how does it work, and balancing out your model’s learning ability.</strong></p>
 <p>Computer scientists so as mathematicians has unlocked the ability of our machines to comprehend what do humans see, think, or even comprehend. As humans learn naturally through experience, computers learn through data and some certain parameter setups and  that is why out of the plethora of hyperparameters, we will focus here on learning rate. We call this the ace of training parameters because it controls how much your model learns in the training process.</p>
 <p>As defined in the article from Belcic and Stryker from IBM, this governs how much a model adjusts its parameters at each step of its optimization algorithm. To make it sound human, it adjusts how much information you’ll be getting through your study session while overthinking whether you’ll be passing the test or not. This hyperparameter ensures that your model learns well without under or overcompensating, else your model may learn maybe nothing at all or be too considerate.</p>
 <p><img alt="Bokuto-san, I'm not even your brother." src="_images/Pasted-image-20251115211620.png" /></p>
 <p><em>“Bokuto-san, I’m not even your brother.”</em></p>
 <p>Okay, enough of this silly joke with my illustration featuring characters from a volleyball anime franchise but this is simple but complex example if your model learns too much or barely at all. Assuming that you read a government form that asks you for <em>significant other</em>, overgeneralizing it means it assumes that this <em>significant other</em> is someone who takes care of you, regardless it could be your partner, your best friend, or maybe your neighbor. Under generalizing it means <em>obviously</em>, you don’t know what it means at all. A good learning rate assumes that this <em>significant other</em> is a key person that is related to you, such as your partner, children, or anyone related by blood.</p>
 <p>Learning rate parameters usually range from 0.0 to 1.0. A common rule of thumb usually sets that the learning rate should go along with the number of epochs and even the choice of optimizer. Wait… What the heck are epochs and  an optimizer?</p>
-</section>
 <section id="it-doesn-t-work-alone">
 <h2>It doesn’t work alone!<a class="headerlink" href="#it-doesn-t-work-alone" title="Link to this heading">#</a></h2>
 <p>Okay, sometimes the learning rate doesn’t work itself alone. The number of epochs and the choice of optimizers really do matter in training your model. Epochs sets how many times your model should learn all the information in the dataset that you are training with but setting it costs a warning. Giving it too low causes the model never to converge: it learns too little or nothing at all. Giving it way too high causes it to overfit: meaning, it learns but its limited to what it sees but never generalizes on something new.</p>
@@ -429,7 +426,7 @@ document.write(`
 <section id="let-s-try-it-out">
 <h2>Let’s Try it Out!<a class="headerlink" href="#let-s-try-it-out" title="Link to this heading">#</a></h2>
 <p>We will test out how learning rate affects model convergence by looking at the graph of learning rates and the quality of predictions. We will be using a very small dataset from MNIST and a very simple CNN. You can opt to copy and paste to or rather code along.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">####  We will import the packages first</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">##  We will import the packages first</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">torch.nn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nn</span>
@@ -518,10 +515,10 @@ document.write(`
 </pre></div>
 </div>
 <p>In this first part of our demonstration, we will try out an SGD optimizer with a learning rate of 0.01 (a common learning rate in SGD).</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#### We&#39;ll instantiate the class before we can be able to use it</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">## We&#39;ll instantiate the class before we can be able to use it</span>
 <span class="n">model</span> <span class="o">=</span> <span class="n">CNN</span><span class="p">()</span>
 
-<span class="c1">#### We then set up the criterion and optimizer</span>
+<span class="c1">## We then set up the criterion and optimizer</span>
 <span class="n">criterion</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">CrossEntropyLoss</span><span class="p">()</span>
 <span class="n">optimizer</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">SGD</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">parameters</span><span class="p">(),</span> <span class="n">lr</span><span class="o">=</span><span class="mf">0.01</span><span class="p">)</span>
 </pre></div>
@@ -534,7 +531,7 @@ document.write(`
 <span class="n">model</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#### Setting up our training and variables to store our training info</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">## Setting up our training and variables to store our training info</span>
 
 <span class="n">epochs</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
@@ -562,10 +559,10 @@ document.write(`
         <span class="n">train_pred</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="n">x_train</span><span class="p">)</span>
         <span class="n">train_loss</span> <span class="o">=</span> <span class="n">criterion</span><span class="p">(</span><span class="n">train_pred</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
 
-        <span class="n">train_pred_vec</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">train_pred</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="c1">####  prediction vector</span>
+        <span class="n">train_pred_vec</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">train_pred</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="c1">##  prediction vector</span>
         <span class="n">train_corr</span> <span class="o">+=</span> <span class="p">(</span><span class="n">train_pred_vec</span> <span class="o">==</span> <span class="n">y_train</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 
-        <span class="c1">####  Update parameters</span>
+        <span class="c1">##  Update parameters</span>
         <span class="n">optimizer</span><span class="o">.</span><span class="n">zero_grad</span><span class="p">()</span>
         <span class="n">train_loss</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
         <span class="n">optimizer</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
@@ -630,7 +627,7 @@ document.write(`
 </table>
 </div>
 <p>Let us take a look how do the train and accuracy each epoch does work along. Run this code below to take a preview of the accuracy and loss per epoch of our model might look like.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#### For Accuracy per Epoch</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">## For Accuracy per Epoch</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">train_accs</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Train&quot;</span><span class="p">)</span>
@@ -644,7 +641,7 @@ document.write(`
 </div>
 <p><img alt="" src="_images/Pasted-image-20251116121120.png" /></p>
 <p><em>Not much overfitting is shown as it reaching to the last accuracy per epoch and has shown level of convergence.</em></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#### For Loss per Epoch</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">## For Loss per Epoch</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">train_losses</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5000</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">train_losses</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5000</span><span class="p">)],</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Train&quot;</span><span class="p">)</span>
@@ -770,7 +767,6 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exploring-the-impact-of-learning-rate-how-does-it-work-and-balancing-out-your-model-s-learning-ability">Exploring the impact of learning rate, how does it work, and balancing out your model’s learning ability.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#it-doesn-t-work-alone">It doesn’t work alone!</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#let-s-try-it-out">Let’s Try it Out!</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#let-s-take-a-look">Let’s take a look!</a></li>
