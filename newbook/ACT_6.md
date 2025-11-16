@@ -1,4 +1,4 @@
-<h1>The Ace of Training Parameters - The Learning Rate</h1>
+# The Ace of Training Parameters - The Learning Rate
 <h4>Exploring the impact of learning rate, how does it work, and balancing out your model's learning ability.</h4>
 
 Computer scientists so as mathematicians has unlocked the ability of our machines to comprehend what do humans see, think, or even comprehend. As humans learn naturally through experience, computers learn through data and some certain parameter setups and  that is why out of the plethora of hyperparameters, we will focus here on learning rate. We call this the ace of training parameters because it controls how much your model learns in the training process.
