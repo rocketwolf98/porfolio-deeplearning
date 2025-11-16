@@ -68,8 +68,6 @@ We will demonstrate on how we can use PyTorch in building our own Linear Regress
 You may not see some news here but the computers can now see numbers. Here's how we do it and why it goes wrong.
 :::
 
-::::
-
 :::{grid-item-card} 
 :link: ACT_6
 :link-type: doc
